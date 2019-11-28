@@ -59,6 +59,7 @@
 - ` git branch ` 查看分支
 - ` git branch 分支名称 ` 创建分支
 - ` git checkout 分支名称 ` 切换分支
+- ` git checkout -b  分支名称 ` 创建并切换到该分支（即前两项合并）
 - ` git merge 来源分支 ` 合并分支
 - ` git branch -d 分支名称 ` 删除分支（分支合并后才允许被删除）（-D 大写强制删除）
 

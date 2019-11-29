@@ -27,11 +27,19 @@
 3. `` git add  `` 文件列表 追踪文件
 4. `` git commit -m 提交信息 `` 向仓库提交代码
 5. `` git log `` 查看提交记录
+   `` git log --pretty=oneline `` 查看简单的提交记录
 
 #### 撤销
 
 * 用暂存区中的文件覆盖工作目录中的文件：`` git checkout ``
+
+* 把文件在工作区做的修改全部撤销  `` git checkout -- 文件名`` 
+   两种情况：
+   1.readme.txt自动修改后，还没有放到暂存区，使用 撤销修改就回到和版本库一模一样的状态。
+   2.另外一种是readme.txt已经放入暂存区了，接着又作了修改，撤销修改就回到添加暂存区后的状态。
+   
 * 将文件从暂存区中删除：`` git rm --cached 文件名 ``
+
 * 将git仓库中指定的更新记录恢复出来，并且覆盖暂存区和工作目录：`` git reset --hard commitID``  
 
 #### 修改git commit信息中的author
@@ -41,6 +49,14 @@
    `` git commit --amend --author=‘xxx <xxxx@xxx.xxx>’ ``
 
 2. 输入`` git rebase --continue  ``结束修改
+
+#### 回溯到上一个版本 ####
+`` git reset --hard HEAD^ ``  回溯到上一个版本
+`` git reset --hard HEAD^^ `` 回溯到上上个版本
+`` git reset --hard HEAD~100 `` 回溯到100个版本之前
+
+#### 查看文件内容 ####
+`` cat 文件名称 `` 
 
 ## Git进阶 
 
